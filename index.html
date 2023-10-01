@@ -14,6 +14,14 @@
                 height: 200px;
                 background-color: #a1a1a1;
             }
+            .cinza_claro2 {
+                height: 67px;
+                background-color: #a1a1a1;
+            }
+            .cinza_claro3 {
+                height: 66px;
+                background-color: #a1a1a1;
+            }
             .espaço {
                 height: 35px;
             }
@@ -52,21 +60,21 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link" style="color:#ffffff">
+                                        <a href="#" class="nav-link" style="color:#ffffff" data-toggle="modal" data-target="#Quiz">
                                             Quizz
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link" style="color:#ffffff">
+                                        <a href="#" class="nav-link" style="color:#ffffff" data-toggle="modal" data-target="#TesteTibetano">
                                             Teste tibetano
                                         </a>
                                     </li>
                                     <li class="nav-item dropdown">
                                         <a href="#" class="nav-link dropdown-toggle" id="linkDrop" data-toggle="dropdown" style="color:#ffffff">Adivinha número</a>
                                         <div class="dropdown-menu">
-                                            <a href="#" class="dropdown-item">Fácil</a>
-                                            <a href="#" class="dropdown-item">Médio</a>
-                                            <a href="#" class="dropdown-item">Difício</a>
+                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#AdivinhaNumerosF">Fácil</a>
+                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#AdivinhaNumerosM">Médio</a>
+                                            <a href="#" class="dropdown-item" data-toggle="modal" data-target="#AdivinhaNumerosD">Difício</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -202,11 +210,61 @@
                 <div class="col-6 text-center justify-content-center align-items-center cinza_claro">
                     <img src="Adivinha números.png" class="img-fluid rounded" style="height: 200px;"/>
                 </div>
-                <div class="col-6 cinza_claro d-flex align-items-center">
-                    <button type="button" class="btn-fluid btn-primary btn-block" data-toggle="modal" data-target="#AdivinhaNumeros">
-                        JOGAR
+                <div class="col-6 cinza_claro2 d-flex align-items-center">
+                    <button type="button" class="btn-fluid btn-primary btn-block" data-toggle="modal" data-target="#AdivinhaNumerosF">
+                        JOGAR MODO FÁCIL
                     </button>
-                    <div class="modal" id="AdivinhaNumeros">
+                    <div class="modal" id="AdivinhaNumerosF">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Adivinha Números</h5>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="EM DESENVOLVIMENTO.png" class="img-fluid rounded"/>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Fechar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 cinza_claro3 d-flex align-items-center">
+                    <button type="button" class="btn-fluid btn-primary btn-block" data-toggle="modal" data-target="#AdivinhaNumerosM">
+                        JOGAR MODO MÉDIO
+                    </button>
+                    <div class="modal" id="AdivinhaNumerosM">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Adivinha Números</h5>
+                                    <button type="button" class="close" data-dismiss="modal">
+                                        <span aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="EM DESENVOLVIMENTO.png" class="img-fluid rounded"/>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                        Fechar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 cinza_claro2 d-flex align-items-center">
+                    <button type="button" class="btn-fluid btn-primary btn-block" data-toggle="modal" data-target="#AdivinhaNumerosM">
+                        JOGAR MODO DIFÍCIL
+                    </button>
+                    <div class="modal" id="AdivinhaNumerosM">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -237,10 +295,10 @@
                     Desenvolvedores
                 </div>
                 <div class="col-6 text-center justify-content-center align-items-center cinza_claro">
-                    <img src="Desenvolvedor 1.jpg" class="img-fluid rounded"/>
+                    <img src="Desenvolvedor 1.jpg" class="img-fluid rounded" style="height: 200px;"/>
                 </div>
                 <div class="col-6 text-center justify-content-center align-items-center cinza_claro">
-                    <img src="Desenvolvedor 2.jpg" class="img-fluid rounded"/>
+                    <img src="Desenvolvedor 2.jpg" class="img-fluid rounded" style="height: 200px;"/>
                 </div>
                 <div class="col-12 cinza"></div>
             </div>
