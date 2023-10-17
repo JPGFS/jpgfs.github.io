@@ -20,30 +20,27 @@
     </style>
     <title>Adivinhando o quê você pensou !!!!</title>
   </head>
-  <body background="jpgfs.github.io/Imagens/Adivinha imagem.jpg" text="Darkblue">
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-2 d-flex align-items-center">
+          <a href="jpgfs.github.io/index.html">
+            <button type="button" class="btn-fluid btn-primary btn-block" class="bg-dark">
+              Fechar
+            </button>
+         </a>
+        </div>
+        <div class="col-10 text-center justify-content-center align-items-center">
+          <h3>Adivinha imagem</h3>
+        </div>
+        <div class="col-2>
+        </div>
+      </div>
+    </div>
     <script language="Javascript"> 
-      //alert('Veja a carta a seguir, memorize uma imagem, e espere que vou adivinhar');
-      //alert('Só errarei se você não identificar corretamente\n as cartas em que está a imagem que você pensou !!!');
-      //alert('Então preste muita atenção ao escolher as cartas !!!');
-      document.write('<center> <h1> Jogo da Adivinhação </h1>');
-      document.write('<form name="formAdivinha" method="get"> ');				
-      document.write('<img src="jpgfs.github.io/Imagens/Imagens do jogo de imagens/Cartão principal.png" class="img-fluid />  ');
-      document.write('<marquee behavior="alternate"><h2> Escolha abaixo as cartas em que sua imagem aparece.</h2></marquee>');
-      document.write('<div class="container"><div class="row"><div class="col-12 branco"><img src="Imagens/Imagens do jogo de imagens/cartão1.png" class="img-fluid /></div></div></div> ');
-      document.write('<div class="container"><div class="row"><div class="col-12 cinza_claro"><INPUT TYPE="radio" NAME="op1" VALUE="Sim">Sim<INPUT TYPE="radio" NAME="op1" VALUE="Não" checked>Não<P></div></div>  ');
-      document.write('<div class="container"><div class="row"><div class="espaço"></div></div></div>');
-      document.write('<img src="Imagens/Imagens do jogo de imagens/cartão2.png" class="img-fluid /> ');
-      document.write('<INPUT TYPE="radio" NAME="op2" VALUE="Sim">Sim');
-      document.write('<INPUT TYPE="radio" NAME="op2" VALUE="Não" checked>Não<P>');
-      document.write('<img src="Imagens/Imagens do jogo de imagens/cartão3.png" class="img-fluid /> ');
-      document.write('<INPUT TYPE="radio" NAME="op3" VALUE="Sim">Sim');
-      document.write('<INPUT TYPE="radio" NAME="op3" VALUE="Não" checked>Não<P>');
-      document.write('<img src="Imagens/Imagens do jogo de imagens/cartão4.png" class="img-fluid />  ');
-      document.write('<INPUT TYPE="radio" NAME="op4" VALUE="Sim">Sim');
-      document.write('<INPUT TYPE="radio" NAME="op4" VALUE="Não" checked>Não<P>');
-      document.write('<input type="button" name="verifica" value="Ver o Resultado" onclick="respostas()">');
-      document.write('<input type="reset" name="limpar" value="Limpar Respostas" >');
-      document.write('</form> </center>');
+      alert('Veja a carta a seguir, memorize uma imagem, e espere que vou adivinhar');
+      alert('Só errarei se você não identificar corretamente\n as cartas em que está a imagem que você pensou !!!');
+      alert('Então preste muita atenção ao escolher as cartas !!!');
       function respostas(){ 
         var posicao=0;
 
