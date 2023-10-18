@@ -24,7 +24,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-2 d-flex align-items-center">
-          <a href="jpgfs.github.io">
+          <a href="index.html">
             <button type="button" class="btn-fluid btn-primary btn-block" class="bg-dark">
               Fechar
             </button>
@@ -35,10 +35,42 @@
         </div>
       </div>
     </div>
-    <script> 
-      alert('Veja a carta a seguir, memorize uma imagem, e espere que vou adivinhar');
-      alert('Só errarei se você não identificar corretamente\n as cartas em que está a imagem que você pensou !!!');
-      alert('Então preste muita atenção ao escolher as cartas !!!');
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Como jogar?">
+            Veja uma as imagens a seguir, memorize uma linguagem de programação e então me diga quando ela aparecer.
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 branco">
+          <img src="Imagens/Imagens do jogo de imagens/Cartão principal.png" class="img-fluid" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <h3>
+            Escolha uma imagem
+          </h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="espaço"></div>
+      </div>
+      <div class="row">
+        <div class="col-12 branco">
+          <img src="Imagens/Imagens do jogo de imagens/cartão1.png" class="img-fluid" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 cinza_claro">
+          <input type="radio" name="op1" value="Sim">Sim
+          <input type="radio" name="op1" value="Não" checked>Não<p></p>
+        </div>
+      </div>
+    </div>
+    <script>
       function respostas(){ 
         var posicao=0;
 
