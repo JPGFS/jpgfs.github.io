@@ -3,6 +3,11 @@
   <head lang="pt-br">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+      .espaço {
+        height: 10px;
+      }
+    </style>
     <title>Adivinha imagem</title>
   </head>
   <body>
@@ -12,32 +17,33 @@
     <div class="container">
       <div class="card text-center align-items-center">
         <h1>Adivinha imagem</h1>
+        <div class="espaço"></div>
         <div class="col-12 cinza_claro d-flex align-items-center">
-          <button type="button" class="btn-fluid btn-primary btn-block" data-toggle="modal" data-target="#ComoJ">
+          <button type="button" data-toggle="modal" data-target="#ComoJ">
             Como jogar?
-          </button> 
-          <div class="modal" id="ComoJ">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Quizz</h5>
-                  <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true"></span>
-                  </button>
-                  </div>
-                  <div class="modal-body">
-                    Você deve escolher uma imagem, depois responder quando ela aparecer para que eu possa adivinhar qual é
-                  </div>
-                  <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                    Fechar
-                  </button>
-                  </div>
-                </div>
+          </button>
+        </div>
+        <div class="modal" id="ComoJ">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Como jogae?</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true"></span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Você deve escolher uma imagem, depois responder quando ela aparecer para que eu possa adivinhar qual é
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Fechar
+                </button>
               </div>
             </div>
           </div>
         </div>
+        <div class="espaço"></div>
       </div>
       </div>
         <div class="row justify-content-center">
