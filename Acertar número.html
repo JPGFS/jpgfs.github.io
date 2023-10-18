@@ -2,25 +2,18 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<title>Acertar número</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		<style>
 			.espaço {
-        		height: 30px;
-      		}
+				height: 30px;
+			}
 		</style>
 	</head>
-	<body background="Imagens/Fundo.png" text="Dark">
-		<div class="container justify-content-center">
-			<div class="row justify-content-center">
-				<div class="col-12">
-					<a href="index.html" class="btn btn-primary mt-2">Fechar</a>
-				</div>
-			</div>
-		</div>
+	<body style="background-image: url('Imagens/Fundo.png'); color: dark;">
 		<div class="container">
-			<div class="card text-center align-items-center">
-				<h1>Acertar número</h1>
+			<div class="card text-center">
+				<h1 class="mt-3">Acertar número</h1>
 				<div class="espaço"></div>
 				<div class="row justify-content-center">
 					<div class="col-12 cinza_claro d-flex align-items-center">
@@ -35,11 +28,12 @@
 							<div class="modal-header">
 								<h5 class="modal-title">Como jogar?</h5>
 								<button type="button" class="close" data-dismiss="modal">
-									<span aria-hidden="true"></span>
+									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
 							<div class="modal-body">
-								Digite um número de 1 a 10, então descubra se acertou
+								Digite um número de 1 a 10 e descubra se acertou.
+							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">
 									Fechar
@@ -49,7 +43,7 @@
 					</div>
 				</div>
 				<div class="espaço"></div>
-				<div class="card justify-content-center">
+				<div class="card text-center">
 					<div class="col-12 cinza_claro d-flex align-items-center">
 						<button type="button" data-toggle="modal" data-target="#jogo">
 							JOGAR
@@ -62,7 +56,7 @@
 							<div class="modal-header">
 								<h5 class="modal-title">Acertar número</h5>
 								<button type="button" class="close" data-dismiss="modal">
-									<span aria-hidden="true"></span>
+									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
 							<div class="modal-body">
@@ -70,7 +64,7 @@
 								<input type="number" id="palpite" class="form-control" placeholder="Digite seu palpite">
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#Resultado">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#Resultado" onclick="verificarPalpite()">
 									Continuar
 								</button>
 							</div>
@@ -83,14 +77,13 @@
 							<div class="modal-header">
 								<h5 class="modal-title">Resultado</h5>
 								<button type="button" class="close" data-dismiss="modal">
-									<span aria-hidden="true"></span>
+									<span aria-hidden="true">&times;</span>
 								</button>
 							</div>
-							<div class="modal-body">
-								
+							<div class="modal-body" id="resultadoTexto">
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="reiniciarJogo()">
 									Fechar
 								</button>
 							</div>
@@ -102,49 +95,26 @@
 		<script>
 			var num = Math.floor(Math.random() * 10) + 1;
 			var palpite = 0;
-			var tentativas = 0;
-			$('#jogo').on('hidden.bs.modal', function () {
-				palpite = parseInt(document.getElementById('userGuess').value);
-				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
-					$('#Resultado').modal('show');
-				}
-			});
-			$('#Resultado').on('hidden.bs.modal', function () {
-				if (palpite === num) {
-					document.querySelector('#Resultado .modal-body p').textContent = 'Parabéns! Você acertou!';
-				}
-				else {
-					document.querySelector('#Resultado .modal-body p').textContent = 'Você errou. Tente novamente.';
-				}
-				$('#Resultado').modal('show');
-			});
-			$('#jogo').on('hidden.bs.modal', function () {
+
+			function verificarPalpite() {
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
-					$('#Resultado .modal-body p').text('Número inválido. Tente novamente.');
-					$('#Resultado .modal-footer button').text('Fechar');
-				}
-				else {
-					tentativas++;
+					document.getElementById('resultadoTexto').textContent = 'Número inválido. Tente novamente.';
+					document.querySelector('#Resultado .modal-footer button').textContent = 'Fechar';
+				} else {
 					if (palpite === num) {
-						$('#Resultado .modal-body p').text('Parabéns! Você acertou em ' + tentativas + ' tentativas.');
-						$('#Resultado .modal-footer button').text('Fechar');
+						document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou.';
+					} else {
+						document.getElementById('resultadoTexto').textContent = 'Você errou. Tente novamente.';
 					}
-					else if (palpite < num) {
-						$('#Resultado .modal-body p').text('Seu palpite é menor. Tente novamente.');
-						$('#Resultado .modal-footer button').text('Tentar Novamente');
-					}
-					else {
-						$('#Resultado .modal-body p').text('Seu palpite é maior. Tente novamente.');
-						$('#Resultado .modal-footer button').text('Tentar Novamente');
-					}
+					document.querySelector('#Resultado .modal-footer button').textContent = 'Fechar';
 				}
-				$('#Resultado').modal('show');
-			});
-			$('#Resultado').on('hidden.bs.modal', function () {
+			}
+
+			function reiniciarJogo() {
+				num = Math.floor(Math.random() * 10) + 1;
 				document.getElementById('palpite').value = '';
-				tentativas = 0;
-			});
+			}
 		</script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
