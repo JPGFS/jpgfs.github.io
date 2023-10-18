@@ -11,7 +11,7 @@
     <title>Adivinha imagem</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container justify-content-center">
       <div class="row justify-content-center">
         <div class="col-12">
           <a href="index.html" class="btn btn-primary mt-2">Fechar</a>
@@ -52,16 +52,13 @@
       </div>
       </div>
         <div class="row justify-content-center">
-          <div class="espaço"></div>
           <div class="col-8 card text-center align-items-center">
             <img src="Imagens/Imagens do jogo de imagens/Cartão principal.png" class="img-fluid" style="height: 300px;" />
           </div>
-          <div class="espaço"></div>
         </div>
         <form name="formAdivinha">
           <div class="row justify-content-center">
             <div class="col-8 card text-center align-items-center">
-              <div class="espaço"></div>
               <img src="Imagens/Imagens do jogo de imagens/cartão1.png" class="img-fluid" style="height: 200px;" />
               <div class="card-body">
                 <input type="radio" name="op1" value="Sim">Sim
@@ -71,35 +68,29 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-8 card text-center align-items-center">
-              <div class="espaço"></div>
               <img src="Imagens/Imagens do jogo de imagens/cartão2.png" class="img-fluid" style="height: 200px;" />
               <div class="card-body">
                 <input type="radio" name="op2" value="Sim">Sim
                 <input type="radio" name="op2" value="Não" checked>Não
               </div>
-              <div class="espaço"></div>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-8 card text-center align-items-center">
-              <div class="espaço"></div>
               <img src="Imagens/Imagens do jogo de imagens/cartão3.png" class="img-fluid" style="height: 200px;" />
               <div class="card-body">
                 <input type="radio" name="op3" value="Sim">Sim
                 <input type="radio" name="op3" value="Não" checked>Não
               </div>
-              <div class="espaço"></div>
             </div>
           </div>
           <div class="row justify-content-center">
             <div class="col-8 card text-center align-items-center">
-              <div class="espaço"></div>
               <img src="Imagens/Imagens do jogo de imagens/cartão4.png" class="img-fluid rounded" style="height: 200px;" />
               <div class="card-body">
                 <input type="radio" name="op4" value="Sim">Sim
                 <input type="radio" name="op4" value="Não" checked>Não
               </div>
-              <div class="espaço"></div>
             </div>
           </div>
           <br>
@@ -127,7 +118,7 @@
           
           if (posicao > 0) {
             document.write('<div class="card mt-4 text-center">');
-            document.write('<h3>A imagem que você escolheu foi:</h3><br>');
+            document.write('<div class="conteiner"><div class="row justify-content-center"><div class="col-12 card text-center align-items-center"><h3>A imagem que você escolheu foi:</h3></div></div></div><br>');
             if(posicao ==1) document.write('<img src="Imagens/Imagens do jogo de imagens/Img1.png" class="img-fluid" style="height: 200px;" /> ');
             if(posicao ==2) document.write('<img src="Imagens/Imagens do jogo de imagens/Img2.png" class="img-fluid" style="height: 200px;" /> ');
             if(posicao ==3) document.write('<img src="Imagens/Imagens do jogo de imagens/Img3.png" class="img-fluid" style="height: 200px;" /> ');
@@ -143,7 +134,7 @@
             if(posicao ==13) document.write('<img src="Imagens/Imagens do jogo de imagens/Img13.png" class="img-fluid" style="height: 200px;" /> ');
             if(posicao ==14) document.write('<img src="Imagens/Imagens do jogo de imagens/Img14.png" class="img-fluid" style="height: 200px;" /> ');
             if(posicao ==15) document.write('<img src="Imagens/Imagens do jogo de imagens/Img15.png" class="img-fluid" style="height: 200px;" /> ');
-            document.write('<br><br><a href="Adivinha imagem.html" class="btn btn-primary mt-2"><h3>Tentar Novamente!!!</h3></a>');
+            document.write('<br><br><a href="Adivinha imagem.html" class="btn btn-primary mt-2">Tentar Novamente</a>');
             document.write('</div>');
           }
           else {
