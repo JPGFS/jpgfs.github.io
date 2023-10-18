@@ -102,30 +102,29 @@
 		<script>
 			var num = Math.floor(Math.random() * 10) + 1;
 			var palpite = 0;
-			var tentativas = 0;
 
 			function verificarPalpite() {
 				palpite = parseInt(document.getElementById('palpite').value);
-				tentativas++;
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
 					document.getElementById('resultadoTexto').textContent = 'Número inválido. Tente novamente.';
-				} else if (palpite === num) {
-					document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou em ' + tentativas + ' tentativas.';
-				} else if (palpite < num) {
-					document.getElementById('resultadoTexto').textContent = 'Seu palpite é menor. Tente novamente.';
 				} else {
-					document.getElementById('resultadoTexto').textContent = 'Seu palpite é maior. Tente novamente.';
+					if (palpite === num) {
+						document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou.';
+					} else if (palpite < num) {
+						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MAIOR que o seu palpite.';
+					} else {
+						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MENOR que o seu palpite.';
+					}
 				}
 			}
 
 			function reiniciarJogo() {
 				num = Math.floor(Math.random() * 10) + 1;
 				document.getElementById('palpite').value = '';
-				tentativas = 0;
 			}
 		</script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
-</html>
+</html
