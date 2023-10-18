@@ -3,115 +3,107 @@
   <head lang="pt-br">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style>
-      .branco{
-                height: 200px;
-                text-align: center;
-            }
-      .cinza_claro{
-
-                height: 25px;
-                background-color: #a1a1a1;
-                text-align: center;
-            }
-      .espaço {
-                height: 35px;
-            }
-    </style>
-    <title>Adivinhando o quê você pensou !!!!</title>
+    <title>Adivinha imagem</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-2 d-flex align-items-center">
-          <a href="index.html">
-            <button type="button" class="btn-fluid btn-primary btn-block" class="bg-dark">
-              Fechar
-            </button>
-         </a>
-        </div>
-        <div class="col-12 text-center justify-content-center align-items-center">
-          <h3>Adivinha imagem</h3>
-        </div>
-      </div>
-    </div>
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <button type="button" class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Como jogar?">
-            Veja uma as imagens a seguir, memorize uma linguagem de programação e então me diga quando ela aparecer.
-          </button>
-        </div>
+      <div class="card text-center align-items-center">
+        <h1>Adivinha imagem</h1>
       </div>
-      <div class="row">
-        <div class="col-12 branco">
-          <img src="Imagens/Imagens do jogo de imagens/Cartão principal.png" class="img-fluid" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <h3>
-            Escolha uma imagem
-          </h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="espaço"></div>
-      </div>
-      <div class="row">
-        <div class="col-12 branco">
-          <img src="Imagens/Imagens do jogo de imagens/cartão1.png" class="img-fluid" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-12 cinza_claro">
-          <input type="radio" name="op1" value="Sim">Sim
-          <input type="radio" name="op1" value="Não" checked>Não<p></p>
-        </div>
+        <div class="row">
+          <div class="col-8 card text-center justify-content-center align-items-center">
+            <img src="Imagens/Imagens do jogo de imagens/Cartão principal.png">
+            </div>
+          </div>
+        <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Como jogar?">
+          Escolha uma imagem de uma linguagem de programação, depois diga se ela aparece nos cartões, então, eu direi qual imagem você escolheu
+        </button>
+        <form name="formAdivinha">
+          <div class="row">
+            <div class="col-8 card text-center justify-content-center align-items-center">
+              <img src="Imagens/Imagens do jogo de imagens/cartão1.png">
+              <div class="card-body">
+                <input type="radio" name="op1" value="Sim">Sim
+                <input type="radio" name="op1" value="Não" checked>Não
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 card  text-center align-items-center">
+              <img src="Imagens/Imagens do jogo de imagens/cartão2.png">
+              <div class="card-body">
+                <input type="radio" name="op2" value="Sim">Sim
+                <input type="radio" name="op2" value="Não" checked>Não
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 card  text-center align-items-center">
+              <img src="Imagens/Imagens do jogo de imagens/cartão3.png">
+              <div class="card-body">
+                <input type="radio" name="op3" value="Sim">Sim
+                <input type="radio" name="op3" value="Não" checked>Não
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8 card  text-center align-items-center">
+              <img src="Imagens/Imagens do jogo de imagens/cartão4.png">
+              <div class="card-body">
+                <input type="radio" name="op4" value="Sim">Sim
+                <input type="radio" name="op4" value="Não" checked>Não
+              </div>
+            </div>
+          </div>
+          <br>
+          <button type="button" class="btn btn-primary" name="verifica" onclick="respostas()">Ver o Resultado</button>
+          <button type="reset" class="btn btn-secondary" name="limpar">Limpar Respostas</button>
+        </form>
       </div>
     </div>
+  
     <script>
-      function respostas(){ 
-        var posicao=0;
-
-        var resp1=document.formAdivinha.op1.value;
-        var resp2=document.formAdivinha.op2.value;
-        var resp3=document.formAdivinha.op3.value;
-        var resp4=document.formAdivinha.op4.value;
-
-        alert('resposta 1 '+resp1); alert('resposta 2 '+resp2); alert('resposta 3 '+resp3); alert('resposta 4 '+resp4);
-
-        if(resp1 == "Sim") posicao=posicao+1;
-        if(resp2 == "Sim") posicao=posicao+2; 
-        if(resp3 == "Sim") posicao=posicao+8;
-        if(resp4 == "Sim") posicao=posicao+4;
-
-        if(posicao>0)
-        {
-          //alert('posicao ='+posicao);
-          document.write('<div style="background-color: #4682B4">');
-          document.write('<center><h2>A imagem que você pensou foi: </h2><br />');
-          if(posicao ==1) document.write('<img src="Imagens/Imagens do jogo de imagens/Img1.png" class="img-fluid /> ');
-          if(posicao ==2) document.write('<img src="Imagens/Imagens do jogo de imagens/Img2.png" class="img-fluid /> ');
-          if(posicao ==3) document.write('<img src="Imagens/Imagens do jogo de imagens/Img3.png" class="img-fluid /> ');
-          if(posicao ==4) document.write('<img src="Imagens/Imagens do jogo de imagens/Img4.png" class="img-fluid /> ');
-          if(posicao ==5) document.write('<img src="Imagens/Imagens do jogo de imagens/Img5.png" class="img-fluid /> ');
-          if(posicao ==6) document.write('<img src="Imagens/Imagens do jogo de imagens/Img6.png" class="img-fluid /> ');
-          if(posicao ==7) document.write('<img src="Imagens/Imagens do jogo de imagens/Img7.png" class="img-fluid /> ');
-          if(posicao ==8) document.write('<img src="Imagens/Imagens do jogo de imagens/Img8.png" class="img-fluid /> ');
-          if(posicao ==9) document.write('<img src="Imagens/Imagens do jogo de imagens/Img9.png" class="img-fluid /> ');
-          if(posicao ==10) document.write('<img src="Imagens/Imagens do jogo de imagens/Img10.png" class="img-fluid /> ');
-          if(posicao ==11) document.write('<img src="Imagens/Imagens do jogo de imagens/Img11.png" class="img-fluid /> ');
-          if(posicao ==12) document.write('<img src="Imagens/Imagens do jogo de imagens/Img12.png" class="img-fluid /> ');
-          if(posicao ==13) document.write('<img src="Imagens/Imagens do jogo de imagens/Img13.png" class="img-fluid /> ');
-          if(posicao ==14) document.write('<img src="Imagens/Imagens do jogo de imagens/Img14.png" class="img-fluid /> ');
-          if(posicao ==15) document.write('<img src="Imagens/Imagens do jogo de imagens/Img15.png" class="img-fluid /> ');
-          document.write('<br /></br />');
-          document.write('<img src="adivinhador.jpg" width="300" height="300" />');
-          document.write('<br /><br /><a href=""><h3>Tentar Novamente!!!</h3></a>');
-          document.write('</center> </div>');
-        } else alert('Você não escolheu nenhuma carta');
+      $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+      function respostas() {
+          var posicao = 0;
+          var resp1 = document.formAdivinha.op1.value;
+          var resp2 = document.formAdivinha.op2.value;
+          var resp3 = document.formAdivinha.op3.value;
+          var resp4 = document.formAdivinha.op4.value;
+          
+          if (resp1 == "Sim") posicao = posicao + 1;
+          if (resp2 == "Sim") posicao = posicao + 2;
+          if (resp3 == "Sim") posicao = posicao + 8;
+          if (resp4 == "Sim") posicao = posicao + 4;
+          
+          if (posicao > 0) {
+            document.write('<div class="card mt-4 text-center">');
+            document.write('<h2>A imagem que você pensou foi:</h2><br>');
+            if(posicao ==1) document.write('<img src="Imagens/Imagens do jogo de imagens/Img1.png" class="img-fluid /> ');
+            if(posicao ==2) document.write('<img src="Imagens/Imagens do jogo de imagens/Img2.png" class="img-fluid /> ');
+            if(posicao ==3) document.write('<img src="Imagens/Imagens do jogo de imagens/Img3.png" class="img-fluid /> ');
+            if(posicao ==4) document.write('<img src="Imagens/Imagens do jogo de imagens/Img4.png" class="img-fluid /> ');
+            if(posicao ==5) document.write('<img src="Imagens/Imagens do jogo de imagens/Img5.png" class="img-fluid /> ');
+            if(posicao ==6) document.write('<img src="Imagens/Imagens do jogo de imagens/Img6.png" class="img-fluid /> ');
+            if(posicao ==7) document.write('<img src="Imagens/Imagens do jogo de imagens/Img7.png" class="img-fluid /> ');
+            if(posicao ==8) document.write('<img src="Imagens/Imagens do jogo de imagens/Img8.png" class="img-fluid /> ');
+            if(posicao ==9) document.write('<img src="Imagens/Imagens do jogo de imagens/Img9.png" class="img-fluid /> ');
+            if(posicao ==10) document.write('<img src="Imagens/Imagens do jogo de imagens/Img10.png" class="img-fluid /> ');
+            if(posicao ==11) document.write('<img src="Imagens/Imagens do jogo de imagens/Img11.png" class="img-fluid /> ');
+            if(posicao ==12) document.write('<img src="Imagens/Imagens do jogo de imagens/Img12.png" class="img-fluid /> ');
+            if(posicao ==13) document.write('<img src="Imagens/Imagens do jogo de imagens/Img13.png" class="img-fluid /> ');
+            if(posicao ==14) document.write('<img src="Imagens/Imagens do jogo de imagens/Img14.png" class="img-fluid /> ');
+            if(posicao ==15) document.write('<img src="Imagens/Imagens do jogo de imagens/Img15.png" class="img-fluid /> ');
+            document.write('<br><br><a href=""><h3>Tentar Novamente!!!</h3></a>');
+            document.write('</div>');
+          }
+          else {
+            alert('Você não escolheu nenhuma carta');
+          }
       }
+    </script>
     </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
