@@ -8,101 +8,74 @@
 	<body background="Imagens/Fundo.png" text="Dark">
 		<div class="container justify-content-center">
 			<div class="row justify-content-center">
-			  <div class="col-12">
-				<a href="index.html" class="btn btn-primary mt-2">Fechar</a>
-			  </div>
-			</div>
-		  </div>
-		  <div class="container">
-			<div class="card text-center align-items-center">
-			  <h1>Acertar número</h1>
-			  <div class="espaço"></div>
-			  <div class="row justify-content-center">
-				<div class="col-12 cinza_claro d-flex align-items-center">
-				  <button type="button" data-toggle="modal" data-target="#ComoJ">
-					Como jogar?
-				  </button>
+				<div class="col-12">
+					<a href="index.html" class="btn btn-primary mt-2">Fechar</a>
 				</div>
-			  </div>
-			  <div class="modal" id="ComoJ">
-				<div class="modal-dialog">
-				  <div class="modal-content">
-					<div class="modal-header">
-					  <h5 class="modal-title">Como jogar?</h5>
-					  <button type="button" class="close" data-dismiss="modal">
-						<span aria-hidden="true"></span>
-					  </button>
-					</div>
-					<div class="modal-body">
-					  Você deve digitar um número de 1 a 10 para tentar descobrir o número certo
-					</div>
-					<div class="modal-footer">
-					  <button type="button" class="btn btn-secondary" data-dismiss="modal">
-						Fechar
-					  </button>
-					</div>
-				  </div>
-				</div>
-			  </div>
 			</div>
 		</div>
-		<div class="container justify-content-center">
+		<div class="container">
 			<div class="card text-center align-items-center">
+				<h1>Acertar número</h1>
+				<div class="espaço"></div>
+				<div class="row justify-content-center">
+					<div class="col-12 cinza_claro d-flex align-items-center">
+						<button type="button" data-toggle="modal" data-target="#ComoJ">
+							Como jogar?
+						</button>
+					</div>
+				</div>
 				<div class="modal" id="ComoJ">
 					<div class="modal-dialog">
-					  <div class="modal-content">
-						<div class="modal-header">
-						  <h5 class="modal-title">Como jogar?</h5>
-						  <button type="button" class="close" data-dismiss="modal">
-							<span aria-hidden="true"></span>
-						  </button>
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Como jogar?</h5>
+								<button type="button" class="close" data-dismiss="modal">
+									<span aria-hidden="true"></span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<h5>Digite um número de 1 a 10</h5>
+								<input type="number" id="palpite" class="form-control" placeholder="Digite seu palpite">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#Resultado">
+									Continuar
+								</button>
+							</div>
 						</div>
-						<div class="modal-body">
-							<h5>Digite um número de 1 a 10</h5>
-							<input type="number" id="palpite" class="form-control" placeholder="Digite seu palpite">
+					</div>
+				</div>
+				<div class="modal" id="Resultado">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Resultado</h5>
+								<button type="button" class="close" data-dismiss="modal">
+									<span aria-hidden="true"></span>
+								</button>
+							</div>
+							<div class="modal-body">
+								
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">
+									Fechar
+								</button>
+							</div>
 						</div>
-						<div class="modal-footer">
-						  <button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#Resultado">
-							Continuar
-						  </button>
-						</div>
-					  </div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="modal" id="Resultado">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Resultado</h5>
-                        <button type="button" class="close" data-dismiss="modal">
-                            <span aria-hidden="true"></span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                            Fechar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
 		<script>
 			var num = Math.floor(Math.random() * 10) + 1;
 			var palpite = 0;
-			
 			$('#ComoJ').on('hidden.bs.modal', function () {
-				userGuess = parseInt(document.getElementById('userGuess').value);
-
-				if (palpite < 1 || palpite > 10 || isNaN(userGuess)) {
+				palpite = parseInt(document.getElementById('userGuess').value);
+				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
 					$('#Resultado').modal('show');
 				}
 			});
-
 			$('#Resultado').on('hidden.bs.modal', function () {
 				if (palpite === num) {
 					document.querySelector('#Resultado .modal-body p').textContent = 'Parabéns! Você acertou!';
