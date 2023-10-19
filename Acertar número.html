@@ -78,26 +78,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="modal" id="Errou">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Errou</h5>
-								<button type="button" class="close" data-dismiss="modal">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body" id="erroTexto">
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="reiniciarJogoSemMudarNumero()">
-									Jogar Novamente
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				
 			</div>
 		</div>
 		<script>
@@ -117,16 +97,32 @@
 					}
 				}
 			}
-			function reiniciarJogoSemMudarNumero() {
-				document.getElementById('palpite').value = '';
-				document.getElementById('Errou').style.display = 'none';
+			function checaNumero() {
+				num = prompt("Entre com o numero de 0 á 10 para tentar adivinhar");
+				if(num == null) return false;
+				if(num < 0)
+				{
+					alert('Não coloque números Negativos');
+				}
+				if(parseInt(num).toString()=='NaN') {
+					alert('Digite um número válido');
+					checaNumero();
+					return false;
+				}
+				tentativas=tentativas+1;
+				if(parseInt(num) == num2){
+					alert("Parabéns você acertou em " + tentativas + " tentiva(s).");
+				}
+				else if(parseInt(num) < num2){
+					alert("Errou, tente um numero MAIOR.");
+					checaNumero();
+				}
+				else{
+					alert("Errou, tente um numero MENOR.");
+					checaNumero();
+				}   
 			}
-
-
-			function reiniciarJogo() {
-				num = Math.floor(Math.random() * 10) + 1;
-				document.getElementById('palpite').value = '';
-			}
+				checaNumero()
 		</script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
