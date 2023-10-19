@@ -1,0 +1,144 @@
+Claro, vou ajudar a melhorar o código HTML e adicionar o framework Bootstrap para torná-lo mais bonito e responsivo. No entanto, é importante notar que o código JavaScript presente parece funcional, e não há erros visíveis. Portanto, o foco principal será na melhoria da aparência e usabilidade com Bootstrap. Aqui está o código HTML aprimorado:
+
+html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quizz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body background="Imagens/Fundo.png" text="Dark">
+    <div class="container">
+        <h1 class="mt-3">Quizz</h1>
+        <form name="formQuizz">
+            <ul class="list-group">
+                <li class="list-group-item">A linguagem de programação JavaScript tem algo a ver com a linguagem Java?
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="" value="">
+                        <label class="form-check-label">Sim, ela foi inspirada nela</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="" value="">
+                        <label class="form-check-label">Sim, mas tem a diferença que o JavaScript contem Scripts</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="r0" value="correta1">
+                        <label class="form-check-label">Não, o nome JavaScript só é inpirado em Java</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="" value="">
+                        <label class="form-check-label">Não, Só tem o mesmo nome pois é do mesmo criador</label>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item">Qual linguagem de programação é famosa por sua eficiência em processamento de dados e é comumente usada em análise de dados e aprendizado de máquina?
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="2" value="">
+                        <label class="form-check-label">CSS</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="r1" value="correta2">
+                        <label class="form-check-label">Python</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="2" value="">
+                        <label class="form-check-label">PHP</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="2" value="">
+                        <label class="form-check-label">Java</label>
+                    </div>
+                </li>
+            </ul>
+            <ul class="list-group">
+                <li class="list-group-item">Cobol é uma linguagem de programação normalmente usada por quem hoje em dia?
+                        <input class="form-check-input" type="radio" name="r2" value="correta3">
+                        <label class="form-check-label">Bancos</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="3" value="">
+                        <label class="form-check-label">Super computadores</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="3" value="">
+                        <label class="form-check-label">Programadores da nova geração</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="3" value="">
+                        <label class="form-check-label">Por ninguém</label>
+                    </div>
+                </li>
+            </ul>
+            <button type="button" class="btn btn-primary mt-3" onclick="respostas()">Ver o Resultado</button>
+            <button type="reset" class="btn btn-secondary mt-3">Limpar</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function respostas(){
+			   
+			   var acertos=0;
+			   var resp0=document.formQuizz.r0.value;
+			   var resp1=document.formQuizz.r1.value;
+			   var resp2=document.formQuizz.r2.value;
+			   var resp3=document.formQuizz.r3.value;
+			   var resp4=document.formQuizz.r4.value;
+			   var resp5=document.formQuizz.r5.value;
+			   var resp6=document.formQuizz.r6.value;
+			   var resp7=document.formQuizz.r7.value;
+			   var resp8=document.formQuizz.r8.value;
+			   var resp9=document.formQuizz.r9.value;
+			   var resp10=document.formQuizz.r10.value;
+			   
+			   var resposta=[];
+				resposta[0] = "correta1";
+				resposta[1] = "correta2";
+				resposta[2] = "correta3";
+				resposta[3] = "correta4";
+				resposta[4] = "correta5";
+				resposta[5] = "correta6";
+				resposta[6] = "correta7";
+				resposta[7] = "correta8";
+				resposta[8] = "correta9";
+				resposta[9] = "correta10";
+				resposta[10] = "correta11";
+				
+				
+			 
+				
+				if(resp0 == resposta[0]) acertos=acertos+1;
+				if(resp1 == resposta[1]) acertos=acertos+1;
+				if(resp2 == resposta[2]) acertos=acertos+1;
+				if(resp3 == resposta[3]) acertos=acertos+1;
+				if(resp4 == resposta[4]) acertos=acertos+1;
+				if(resp5 == resposta[5]) acertos=acertos+1;
+				if(resp6 == resposta[6]) acertos=acertos+1;
+				if(resp7 == resposta[7]) acertos=acertos+1;
+				if(resp8 == resposta[8]) acertos=acertos+1;
+				if(resp9 == resposta[9]) acertos=acertos+1;
+				if(resp10 == resposta[10]) acertos=acertos+1;
+				if (acertos!=0)
+				{
+				erros=11-acertos;
+				porcentagem=(acertos/11)*100;
+				alert('Total de Acertos ='+acertos + ' com um total de ' + Math.round(porcentagem)+ ' %  e errou '+ erros+' questão(ões)'); 
+				if(Math.round(porcentagem)<=31) alert ('Só isso? ' + Math.round(porcentagem)+ ' % ');
+				else  if (Math.round(porcentagem)<50) alert ('Com treino se vai longe ' + Math.round(porcentagem)+ ' % ');
+				else  if (Math.round(porcentagem)<=69) alert ('Tá bom, mas pode melhorar. ' + Math.round(porcentagem)+ ' % ');
+				else  if (Math.round(porcentagem)<=79) alert ('Tá um pouco acima da média ' + Math.round(porcentagem)+ ' % ');
+				else  if (Math.round(porcentagem)<=89) alert ('Acima da média mesmo! ' + Math.round(porcentagem)+ ' % ');
+				else  if (Math.round(porcentagem)<=95) alert ('Parabens, já pensou em aprender programação? ' + Math.round(porcentagem)+ ' % ');
+				else  alert ('Roubar é feio, não é possível que você tenha acertado tudo ' + Math.round(porcentagem)+ ' % ');
+				}
+				else alert('Ou você errou tudo, ou não escolheu nada');
+                }
+		</script>
+    </script>
+</body>
+</html>
+
