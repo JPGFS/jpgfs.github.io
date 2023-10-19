@@ -84,23 +84,25 @@
 			var num = Math.floor(Math.random() * 10) + 1;
 			var palpite = 0;
 			var Tentativas = 0;
+			var menorOUmaior = '';
 			var modalJogo = document.getElementById("jogo");
 
 			function verificarPalpite() {
+				if (palpite > num) {
+					menorOUmaior = 'O número é MENOR';
+				}
+				else {
+					menorOUmaior = 'O número é MENOR';
+				}
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
-					alert('Número inválido');
-					if (palpite > num) {
-						alert('O número é MENOR')
-					}
-					else {
-						alert('O número é MAIOR')
-					}
-				} else {
+					alert('Número inválido' + menorOUmaior);
+				} 
+				else {
 					if (palpite === num) {
-						alert('Parabéns! Você acertou.\n\n' + Tentativas + ' tentativa(s).');
+						alert('Parabéns! Você acertou.\n' + Tentativas + ' tentativa(s).');
 						Tentativas++;
-						modalJogo.style.display = "block";
+						modalJogo.style.display = "close";
 					} else {
 						alert('Você errou. Tente novamente.');
 					}
