@@ -90,15 +90,13 @@
 			var menorOUmaior = '';
 			var modalJogo = document.getElementById("jogo");
 
-			function verificarTamanho() {
+			function verificarPalpite() {
 				if (palpite > num) {
 					menorOUmaior = ' O número é MENOR.';
 				}
 				if (palpite < num) {
 					menorOUmaior = ' O número é MAIOR.';
 				}
-			}
-			function verificarPalpite() {
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
 					alert('Número inválido');
