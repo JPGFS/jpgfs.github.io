@@ -71,7 +71,7 @@
 								<input type="number" id="palpite" class="form-control" placeholder="Digite seu palpite">
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#Errou" onclick="verificarPalpite()">
+								<button type="button" class="btn btn-secondary" onclick="verificarPalpite()">
 									Continuar
 								</button>
 							</div>
@@ -84,7 +84,7 @@
 			var num = Math.floor(Math.random() * 10) + 1;
 			var palpite = 0;
 			var Tentativas = 0;
-			var direcionar = '';
+			var modalJogo = document.getElementById("jogo");
 
 			function verificarPalpite() {
 				palpite = parseInt(document.getElementById('palpite').value);
@@ -94,6 +94,7 @@
 					if (palpite === num) {
 						alert('Parabéns! Você acertou.\n\n' + Tentativas + ' tentativa(s).');
 						Tentativas++;
+						modalJogo.style.display = "block";  // Mantém a modal de jogo aberta
 					} else {
 						alert('Você errou. Tente novamente.');
 					}
@@ -104,4 +105,4 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 	</body>
-</html
+</html>
