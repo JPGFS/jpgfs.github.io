@@ -89,40 +89,16 @@
 			function verificarPalpite() {
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
-					document.getElementById('resultadoTexto').textContent = 'Número inválido. Tente novamente.';
+					alert('Número inválido. Tente novamente.');
 				} else {
 					if (palpite === num) {
-						document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou.\n\n' + tentativas + 'tentativas';
-						tentativas++;
+						alert('Parabéns! Você acertou.\n\n' + Tentativas + ' tentativa(s).');
+						Tentativas++;
+					} else {
+						alert('Você errou. Tente novamente.');
 					}
 				}
 			}
-			function checaNumero() {
-				num = prompt("Entre com o numero de 0 á 10 para tentar adivinhar");
-				if(num == null) return false;
-				if(num < 0)
-				{
-					alert('Não coloque números Negativos');
-				}
-				if(parseInt(num).toString()=='NaN') {
-					alert('Digite um número válido');
-					checaNumero();
-					return false;
-				}
-				tentativas=tentativas+1;
-				if(parseInt(num) == num2){
-					alert("Parabéns você acertou em " + tentativas + " tentiva(s).");
-				}
-				else if(parseInt(num) < num2){
-					alert("Errou, tente um numero MAIOR.");
-					checaNumero();
-				}
-				else{
-					alert("Errou, tente um numero MENOR.");
-					checaNumero();
-				}   
-			}
-				checaNumero()
 		</script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
