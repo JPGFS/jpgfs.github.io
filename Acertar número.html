@@ -71,7 +71,7 @@
 								<input type="number" id="palpite" class="form-control" placeholder="Digite seu palpite">
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#Resultado" onclick="verificarPalpite()">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#direcionar" onclick="verificarPalpite()">
 									Continuar
 								</button>
 							</div>
@@ -122,8 +122,17 @@
 		<script>
 			var num = Math.floor(Math.random() * 10) + 1;
 			var palpite = 0;
-			var Tentativas = 0
+			var Tentativas = 0;
+			var direcionar = '';
 
+			function verificarJanela() {
+				if (palpite != num) {
+					direcionar = "Errou";
+				}
+				else {
+					direcionar = "Resultado";
+				}
+			}
 			function verificarPalpite() {
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
