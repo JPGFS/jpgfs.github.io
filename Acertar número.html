@@ -73,6 +73,7 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" onclick="verificarPalpite()">
 									Continuar
+									
 								</button>
 							</div>
 						</div>
@@ -96,7 +97,7 @@
 				}
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
-					alert('Número inválido' + menorOUmaior);
+					alert('Número inválido');
 				} 
 				else {
 					if (palpite === num) {
@@ -104,7 +105,7 @@
 						Tentativas++;
 						modalJogo.style.display = "close";
 					} else {
-						alert('Você errou. Tente novamente.');
+						alert('Você errou.' + menorOUmaior);
 					}
 				}
 			}
