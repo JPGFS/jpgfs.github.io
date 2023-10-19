@@ -245,65 +245,55 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script>
-            function respostas(){
-                
-                var acertos=0;
-                var resp0=document.formQuizz.r0.value;
-                var resp1=document.formQuizz.r1.value;
-                var resp2=document.formQuizz.r2.value;
-                var resp3=document.formQuizz.r3.value;
-                var resp4=document.formQuizz.r4.value;
-                var resp5=document.formQuizz.r5.value;
-                var resp6=document.formQuizz.r6.value;
-                var resp7=document.formQuizz.r7.value;
-                var resp8=document.formQuizz.r8.value;
-                var resp9=document.formQuizz.r9.value;
-                var resp10=document.formQuizz.r10.value;
-                
-                var resposta=[];
-                    resposta[0] = "correta1";
-                    resposta[1] = "correta2";
-                    resposta[2] = "correta3";
-                    resposta[3] = "correta4";
-                    resposta[4] = "correta5";
-                    resposta[5] = "correta6";
-                    resposta[6] = "correta7";
-                    resposta[7] = "correta8";
-                    resposta[8] = "correta9";
-                    resposta[9] = "correta10";
-                    resposta[10] = "correta11";
-                    
-                    
-                
-                    
-                if(resp0 == resposta[0]) acertos=acertos+1;
-                if(resp1 == resposta[1]) acertos=acertos+1;
-                if(resp2 == resposta[2]) acertos=acertos+1;
-                if(resp3 == resposta[3]) acertos=acertos+1;
-                if(resp4 == resposta[4]) acertos=acertos+1;
-                if(resp5 == resposta[5]) acertos=acertos+1;
-                if(resp6 == resposta[6]) acertos=acertos+1;
-                if(resp7 == resposta[7]) acertos=acertos+1;
-                if(resp8 == resposta[8]) acertos=acertos+1;
-                if(resp9 == resposta[9]) acertos=acertos+1;
-                if(resp10 == resposta[10]) acertos=acertos+1;
-                if (acertos!=0)
-                {
-                    var erros=11-acertos;
-                    var porcentagem=(acertos/11)*100;
-                    alert('Total de Acertos ='+acertos + ' com um total de ' + Math.round(porcentagem)+ ' %  e errou '+ erros+' questão(ões)');
+            function respostas() {
+                var acertos = 0;
+                var erros = 0;
+                var porcentagem = 0;
+                var resposta = [
+                    "correta1",
+                    "correta2",
+                    "correta3",
+                    "correta4",
+                    "correta5",
+                    "correta6",
+                    "correta7",
+                    "correta8",
+                    "correta9",
+                    "correta10",
+                    "correta11"
+                ];
+        
+                for (var i = 0; i < resposta.length; i++) {
+                    var respostaUsuario = document.getElementById("r" + i).value;
+                    if (respostaUsuario === resposta[i]) {
+                        acertos++;
+                    } else {
+                        erros++;
+                    }
                 }
-                if(Math.round(porcentagem)<=31) alert ('Só isso? ' + Math.round(porcentagem)+ ' % ');
-                else  if (Math.round(porcentagem)<50) alert ('Com treino se vai longe. Você acertou: ' + Math.round(porcentagem)+ ' % ');
-                else  if (Math.round(porcentagem)<=69) alert ('Tá bom, mas pode melhorar. Você acertou: ' + Math.round(porcentagem)+ ' % ');
-                else  if (Math.round(porcentagem)<=79) alert ('Tá um pouco acima da média: ' + Math.round(porcentagem)+ ' % ');
-                else  if (Math.round(porcentagem)<=89) alert ('Acima da média mesmo! ' + Math.round(porcentagem)+ ' % ');
-                else  if (Math.round(porcentagem)<=95) alert ('Parabens, já pensou em aprender programação? Você acertou: ' + Math.round(porcentagem)+ ' % ');
-                else  if (alert='Roubar é feio, não é possível que você tenha acertado: ' + Math.round(porcentagem)+ ' % ');
-                else {
+        
+                porcentagem = (acertos / resposta.length) * 100;
+        
+                if (acertos > 0) {
+                    alert('Total de Acertos = ' + acertos + ' com um total de ' + Math.round(porcentagem) + '% e errou ' + erros + ' questão(ões)');
+                }
+        
+                if (Math.round(porcentagem) <= 31) {
+                    alert('Só isso? ' + Math.round(porcentagem) + '%');
+                } else if (Math.round(porcentagem) < 50) {
+                    alert('Com treino se vai longe. Você acertou: ' + Math.round(porcentagem) + '%');
+                } else if (Math.round(porcentagem) <= 69) {
+                    alert('Tá bom, mas pode melhorar. Você acertou: ' + Math.round(porcentagem) + '%');
+                } else if (Math.round(porcentagem) <= 79) {
+                    alert('Tá um pouco acima da média: ' + Math.round(porcentagem) + '%');
+                } else if (Math.round(porcentagem) <= 89) {
+                    alert('Acima da média mesmo! ' + Math.round(porcentagem) + '%');
+                } else if (Math.round(porcentagem) <= 95) {
+                    alert('Parabéns, já pensou em aprender programação? Você acertou: ' + Math.round(porcentagem) + '%');
+                } else {
                     alert('Ou você errou tudo, ou não escolheu nada');
                 }
-            }
+            }
         </script>
     </body>
 </html>
