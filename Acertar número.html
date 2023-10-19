@@ -110,14 +110,13 @@
 					document.getElementById('resultadoTexto').textContent = 'Número inválido. Tente novamente.';
 				} else {
 					if (palpite === num) {
-						document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou.';
+						document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou.\nTentativas' + tentativas;
 						tentativas++;
-						document.getElementById('resultadoTexto').textContent = 'Tentativas' + tentativas;
 					} else if (palpite < num) {
-						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MENOR.';
+						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MAIOR.';
 						tentativas++;
 					} else {
-						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MAIOR.';
+						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MENOR.';
 						tentativas++;
 					}
 				}
