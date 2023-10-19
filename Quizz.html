@@ -276,32 +276,34 @@
                     
                 
                     
-                    if(resp0 == resposta[0]) acertos=acertos+1;
-                    if(resp1 == resposta[1]) acertos=acertos+1;
-                    if(resp2 == resposta[2]) acertos=acertos+1;
-                    if(resp3 == resposta[3]) acertos=acertos+1;
-                    if(resp4 == resposta[4]) acertos=acertos+1;
-                    if(resp5 == resposta[5]) acertos=acertos+1;
-                    if(resp6 == resposta[6]) acertos=acertos+1;
-                    if(resp7 == resposta[7]) acertos=acertos+1;
-                    if(resp8 == resposta[8]) acertos=acertos+1;
-                    if(resp9 == resposta[9]) acertos=acertos+1;
-                    if(resp10 == resposta[10]) acertos=acertos+1;
-                    if (acertos!=0)
-                    {
-                    erros=11-acertos;
-                    porcentagem=(acertos/11)*100;
-                    alert('Total de Acertos ='+acertos + ' com um total de ' + Math.round(porcentagem)+ ' %  e errou '+ erros+' questão(ões)'); 
-                    if(Math.round(porcentagem)<=31) alert ('Só isso? ' + Math.round(porcentagem)+ ' % ');
-                    else  if (Math.round(porcentagem)<50) alert ('Com treino se vai longe ' + Math.round(porcentagem)+ ' % ');
-                    else  if (Math.round(porcentagem)<=69) alert ('Tá bom, mas pode melhorar. ' + Math.round(porcentagem)+ ' % ');
-                    else  if (Math.round(porcentagem)<=79) alert ('Tá um pouco acima da média ' + Math.round(porcentagem)+ ' % ');
-                    else  if (Math.round(porcentagem)<=89) alert ('Acima da média mesmo! ' + Math.round(porcentagem)+ ' % ');
-                    else  if (Math.round(porcentagem)<=95) alert ('Parabens, já pensou em aprender programação? ' + Math.round(porcentagem)+ ' % ');
-                    else  alert ('Roubar é feio, não é possível que você tenha acertado ' + Math.round(porcentagem)+ ' % ');
-                    }
-                    else alert('Ou você errou tudo, ou não escolheu nada');
+                if(resp0 == resposta[0]) acertos=acertos+1;
+                if(resp1 == resposta[1]) acertos=acertos+1;
+                if(resp2 == resposta[2]) acertos=acertos+1;
+                if(resp3 == resposta[3]) acertos=acertos+1;
+                if(resp4 == resposta[4]) acertos=acertos+1;
+                if(resp5 == resposta[5]) acertos=acertos+1;
+                if(resp6 == resposta[6]) acertos=acertos+1;
+                if(resp7 == resposta[7]) acertos=acertos+1;
+                if(resp8 == resposta[8]) acertos=acertos+1;
+                if(resp9 == resposta[9]) acertos=acertos+1;
+                if(resp10 == resposta[10]) acertos=acertos+1;
+                if (acertos!=0)
+                {
+                    var erros=11-acertos;
+                    var porcentagem=(acertos/11)*100;
+                    alert('Total de Acertos ='+acertos + ' com um total de ' + Math.round(porcentagem)+ ' %  e errou '+ erros+' questão(ões)');
                 }
+                if(Math.round(porcentagem)<=31) alert ('Só isso? ' + Math.round(porcentagem)+ ' % ');
+                else  if (Math.round(porcentagem)<50) alert ('Com treino se vai longe. Você acertou: ' + Math.round(porcentagem)+ ' % ');
+                else  if (Math.round(porcentagem)<=69) alert ('Tá bom, mas pode melhorar. Você acertou: ' + Math.round(porcentagem)+ ' % ');
+                else  if (Math.round(porcentagem)<=79) alert ('Tá um pouco acima da média: ' + Math.round(porcentagem)+ ' % ');
+                else  if (Math.round(porcentagem)<=89) alert ('Acima da média mesmo! ' + Math.round(porcentagem)+ ' % ');
+                else  if (Math.round(porcentagem)<=95) alert ('Parabens, já pensou em aprender programação? Você acertou: ' + Math.round(porcentagem)+ ' % ');
+                else  if (alert='Roubar é feio, não é possível que você tenha acertado: ' + Math.round(porcentagem)+ ' % ');
+                else {
+                    alert('Ou você errou tudo, ou não escolheu nada');
+                }
+            }
         </script>
     </body>
 </html>
