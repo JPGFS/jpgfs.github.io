@@ -110,7 +110,7 @@
 					document.getElementById('resultadoTexto').textContent = 'Número inválido. Tente novamente.';
 				} else {
 					if (palpite === num) {
-						document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou.\nTentativas' + tentativas;
+						document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou.\n\n' + tentativas + 'tentativas';
 						tentativas++;
 					} else if (palpite < num) {
 						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MAIOR.';
