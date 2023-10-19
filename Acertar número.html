@@ -97,6 +97,26 @@
 						</div>
 					</div>
 				</div>
+				<div class="modal" id="Errou">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Errou</h5>
+								<button type="button" class="close" data-dismiss="modal">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body" id="erroTexto">
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="reiniciarJogoSemMudarNumero()">
+									Jogar Novamente
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 		<script>
@@ -112,15 +132,14 @@
 					if (palpite === num) {
 						document.getElementById('resultadoTexto').textContent = 'Parabéns! Você acertou.\n\n' + tentativas + 'tentativas';
 						tentativas++;
-					} else if (palpite < num) {
-						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MAIOR.';
-						tentativas++;
-					} else {
-						document.getElementById('resultadoTexto').textContent = 'O número sorteado é MENOR.';
-						tentativas++;
 					}
 				}
 			}
+			function reiniciarJogoSemMudarNumero() {
+				document.getElementById('palpite').value = '';
+				document.getElementById('Errou').style.display = 'none';
+			}
+
 
 			function reiniciarJogo() {
 				num = Math.floor(Math.random() * 10) + 1;
