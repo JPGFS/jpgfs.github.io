@@ -73,7 +73,9 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" onclick="verificarPalpite()">
 									Continuar
-									
+									<script>
+										Tentativas++;
+									</script>
 								</button>
 							</div>
 						</div>
@@ -90,10 +92,10 @@
 
 			function verificarPalpite() {
 				if (palpite > num) {
-					menorOUmaior = 'O número é MENOR';
+					menorOUmaior = ' O número é MENOR.';
 				}
 				else {
-					menorOUmaior = 'O número é MENOR';
+					menorOUmaior = ' O número é MAIOR.';
 				}
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
