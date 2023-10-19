@@ -71,27 +71,8 @@
 								<input type="number" id="palpite" class="form-control" placeholder="Digite seu palpite">
 							</div>
 							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#direcionar" onclick="verificarPalpite()">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal" data-toggle="modal" data-target="#Errou" onclick="verificarPalpite()">
 									Continuar
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="modal" id="Resultado">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<h5 class="modal-title">Resultado</h5>
-								<button type="button" class="close" data-dismiss="modal">
-									<span aria-hidden="true">&times;</span>
-								</button>
-							</div>
-							<div class="modal-body" id="resultadoTexto">
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="reiniciarJogo()">
-									Fechar
 								</button>
 							</div>
 						</div>
@@ -125,14 +106,6 @@
 			var Tentativas = 0;
 			var direcionar = '';
 
-			function verificarJanela() {
-				if (palpite != num) {
-					direcionar = "Errou";
-				}
-				else {
-					direcionar = "Resultado";
-				}
-			}
 			function verificarPalpite() {
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
