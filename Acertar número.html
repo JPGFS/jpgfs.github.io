@@ -89,12 +89,18 @@
 			function verificarPalpite() {
 				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
-					alert('Número inválido. Tente novamente.');
+					alert('Número inválido');
+					if (palpite > num) {
+						alert('O número é MENOR')
+					}
+					else {
+						alert('O número é MAIOR')
+					}
 				} else {
 					if (palpite === num) {
 						alert('Parabéns! Você acertou.\n\n' + Tentativas + ' tentativa(s).');
 						Tentativas++;
-						modalJogo.style.display = "block";  // Mantém a modal de jogo aberta
+						modalJogo.style.display = "block";
 					} else {
 						alert('Você errou. Tente novamente.');
 					}
