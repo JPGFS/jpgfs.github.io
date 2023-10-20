@@ -170,13 +170,55 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                
+                                <div class="col-9 card text-center align-items-center">
+                                    <h3>1 – A maneira como você ordenou estas coisas é, evidentemente, um indicativo das suas prioridades na vida.</h3>
+                                    <div class="card-body">
+                                        <h5>Vaca: Sua carreira</h5><br/>
+                                        <h5>Tigre: Sua autoestima</h5><br/>
+                                        <h5>Ovelha: Amor</h5><br/>
+                                        <h5>Cavalo: Família</h5><br/>
+                                        <h5>Porco: Dinheiro</h5><br/><br/>
+                                        <h5 id="animalSelecionado1"> foi seu animal número 1</h5><br/>
+                                        <h5 id="animalSelecionado2"> foi seu animal número 2</h5><br/>
+                                        <h5 id="animalSelecionado3"> foi seu animal número 3</h5><br/>
+                                        <h5 id="animalSelecionado4"> foi seu animal número 4</h5><br/>
+                                        <h5 id="animalSelecionado5"> foi seu animal número 5</h5><br/>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            function mostrarAnimalSelecionado() {
+                var selecionar1 = document.getElementById("animal1");
+                var animalSelecionado1 = document.getElementById("animalSelecionado1");
+                var textoDoAnimal1 = selecionar1.options[selecionar1.selectedIndex].text;
+                animalSelecionado.textContent = textoDoAnimal1;
+
+                var selecionar2 = document.getElementById("animal2");
+                var animalSelecionado2 = document.getElementById("animalSelecionado2");
+                var textoDoAnimal2 = selecionar2.options[selecionar2.selectedIndex].text;
+                animalSelecionado.textContent = textoDoAnimal2;
+
+                var selecionar3 = document.getElementById("animal3");
+                var animalSelecionado3 = document.getElementById("animalSelecionado3");
+                var textoDoAnimal3 = selecionar3.options[selecionar3.selectedIndex].text;
+                animalSelecionado.textContent = textoDoAnimal3;
+
+                var selecionar4 = document.getElementById("animal4");
+                var animalSelecionado4 = document.getElementById("animalSelecionado4");
+                var textoDoAnimal4 = selecionar4.options[selecionar4.selectedIndex].text;
+                animalSelecionado.textContent = textoDoAnimal4;
+
+                var selecionar5 = document.getElementById("animal5");
+                var animalSelecionado5 = document.getElementById("animalSelecionado5");
+                var textoDoAnimal5 = selecionar5.options[selecionar5.selectedIndex].text;
+                animalSelecionado.textContent = textoDoAnimal5;
+            }
+    </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
