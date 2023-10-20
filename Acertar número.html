@@ -83,7 +83,7 @@
 		<script>
 			var num = Math.floor(Math.random() * 10) + 1;
 			var palpite = 0;
-			var Tentativas = 0;
+			var Tentativas = 1;
 			var acertou = 0
 			var menorOUmaior = '';
 			var modalJogo = document.getElementById("jogo");
@@ -104,7 +104,6 @@
 				else {
 					if (palpite === num) {
 						alert('Parabéns! Você acertou.\n' + Tentativas + ' tentativa(s).');
-						Tentativas++;
 						acertou++;
 					} else {
 						alert('Você errou.' + menorOUmaior);
@@ -112,7 +111,7 @@
 				}
 				if (acertou == 1) {
 					acertou = 0;
-					Tentativas = 0;
+					Tentativas = 1;
 					num = Math.floor(Math.random() * 10) + 1;
 				}
 			}
