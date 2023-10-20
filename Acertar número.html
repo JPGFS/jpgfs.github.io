@@ -81,6 +81,7 @@
 			</div>
 		</div>
 		<script>
+			var num = Math.floor(Math.random() * 10) + 1;
 			var palpite = 0;
 			var Tentativas = 0;
 			var acertou = 0
@@ -88,28 +89,25 @@
 			var modalJogo = document.getElementById("jogo");
 
 			function iniciar() {
-				var num = Math.floor(Math.random() * 10) + 1;
-				function verificarPalpite() {
-					palpite = parseInt(document.getElementById('palpite').value);
-					if (palpite > num) {
-						menorOUmaior = ' O número é MENOR.';
+				palpite = parseInt(document.getElementById('palpite').value);
+				if (palpite > num) {
+					menorOUmaior = ' O número é MENOR.';
+					Tentativas++;
+				}
+				if (palpite < num) {
+					menorOUmaior = ' O número é MAIOR.';
+					Tentativas++;
+				}
+				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
+					alert('Número inválido');
+				} 
+				else {
+					if (palpite === num) {
+						alert('Parabéns! Você acertou.\n' + Tentativas + ' tentativa(s).');
 						Tentativas++;
-					}
-					if (palpite < num) {
-						menorOUmaior = ' O número é MAIOR.';
-						Tentativas++;
-					}
-					if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
-						alert('Número inválido');
-					} 
-					else {
-						if (palpite === num) {
-							alert('Parabéns! Você acertou.\n' + Tentativas + ' tentativa(s).');
-							Tentativas++;
-							acertou++;
-						} else {
-							alert('Você errou.' + menorOUmaior);
-						}
+						acertou++;
+					} else {
+						alert('Você errou.' + menorOUmaior);
 					}
 				}
 				if (acertou > 0) {
