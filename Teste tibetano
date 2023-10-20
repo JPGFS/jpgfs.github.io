@@ -7,5 +7,133 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     </head>
     <body background="Imagens/Fundo.png" text="Dark">
+        <div class="container justify-content-center">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <a href="index.html" class="btn btn-primary mt-2">Fechar</a>
+                </div>
+            </div>
+            <h1 style="color:#ffffff" class="mt-3 text-center">Teste tibetano</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <h2 text-center>Pergunta 1</h2>
+                <h3 text-center>Uma vaca, uma ovelha, um tigre, um cavalo e um porco. Coloque os animais na ordem que faz você se sentir feliz. Lembre-se, não pense muito profundamente; basta escrever os nomes dos animais em uma ordem que você gosta.</h3>
+                <ul class="list-group">
+                    <div class="accordion-container">
+                        <input type="checkbox" id="escolha1" class="accordion"/>
+                        <label for="escolha1" class="label">Animal 1</label>
+                        <div class="content">
+                            Vaca
+                        </div>
+                        <div class="content">
+                            Ovelha
+                        </div>
+                        <div class="content">
+                            Tigre
+                        </div>
+                        <div class="content">
+                            Cavalo
+                        </div>
+                        <div class="content">
+                            Porco
+                        </div>
+                        <input type="checkbox" id="escolha2" class="accordion"/>
+                        <label for="escolha2" class="label">Animal 2</label>
+                        <div class="content">
+                            Vaca
+                        </div>
+                        <div class="content">
+                            Ovelha
+                        </div>
+                        <div class="content">
+                            Tigre
+                        </div>
+                        <div class="content">
+                            Cavalo
+                        </div>
+                        <div class="content">
+                            Porco
+                        </div>
+                        <input type="checkbox" id="escolha3" class="accordion"/>
+                        <label for="escolha3" class="label">Animal 3</label>
+                        <div class="content">
+                            Vaca
+                        </div>
+                        <div class="content">
+                            Ovelha
+                        </div>
+                        <div class="content">
+                            Tigre
+                        </div>
+                        <div class="content">
+                            Cavalo
+                        </div>
+                        <div class="content">
+                            Porco
+                        </div>
+                        <input type="checkbox" id="escolha4" class="accordion"/>
+                        <label for="escolha4" class="label">Animal 4</label>
+                        <div class="content">
+                            Vaca
+                        </div>
+                        <div class="content">
+                            Ovelha
+                        </div>
+                        <div class="content">
+                            Tigre
+                        </div>
+                        <div class="content">
+                            Cavalo
+                        </div>
+                        <div class="content">
+                            Porco
+                        </div>
+                        <input type="checkbox" id="escolha5" class="accordion"/>
+                        <label for="escolha5" class="label">Animal 5</label>
+                        <div class="content">
+                            Vaca
+                        </div>
+                        <div class="content">
+                            Ovelha
+                        </div>
+                        <div class="content">
+                            Tigre
+                        </div>
+                        <div class="content">
+                            Cavalo
+                        </div>
+                        <div class="content">
+                            Porco
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <div class="row">
+                <h2 text-center>Pergunta 2</h2>
+                <h3 text-center>Dê um adjetivo a cada substantivo nessa lista. Use apenas um adjetivo por substantivo.</h3>
+                <ul class="list-group">
+                    <li>O cão é <span id="adjetivo1"></span></li>
+                    <li>O gato é <span id="adjetivo2"></span></li>
+                    <li>O rato é <span id="adjetivo3"></span></li>
+                    <li>O café é <span id="adjetivo4"></span></li>
+                    <li>O mar é <span id="adjetivo5"></span></li>
+                </ul>
+            </div>
+            <div class="row">
+                <h2 text-center>Pergunta 3</h2>
+                <h3 text-center>Pense em 5 pessoas que são importantes em sua vida. Para cada uma das cinco pessoas, escolha uma cor na lista a seguir:</h3>
+                <ul class="list-group">
+                    <li>Amarelo: <span id="pessoa1"></span></li>
+                    <li>Laranja: <span id="pessoa2"></span></li>
+                    <li>Vermelho: <span id="pessoa3"></span></li>
+                    <li>Branco: <span id="pessoa4"></span></li>
+                    <li>Verde: <span id="pessoa5"></span></li>
+                </ul>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
