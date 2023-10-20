@@ -73,9 +73,6 @@
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" onclick="verificarPalpite()">
 									Continuar
-									<script>
-										Tentativas++;
-									</script>
 								</button>
 							</div>
 						</div>
@@ -91,20 +88,22 @@
 			var modalJogo = document.getElementById("jogo");
 
 			function verificarPalpite() {
+				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite > num) {
 					menorOUmaior = ' O número é MENOR.';
+					Tentativas++;
 				}
 				if (palpite < num) {
 					menorOUmaior = ' O número é MAIOR.';
+					Tentativas++;
 				}
-				palpite = parseInt(document.getElementById('palpite').value);
 				if (palpite < 1 || palpite > 10 || isNaN(palpite)) {
 					alert('Número inválido');
 				} 
 				else {
 					if (palpite === num) {
-						alert('Parabéns! Você acertou.\n' + Tentativas + ' tentativa(s).');
 						Tentativas++;
+						alert('Parabéns! Você acertou.\n' + Tentativas + ' tentativa(s).');
 						modalJogo.style.display = "close";
 					} else {
 						alert('Você errou.' + menorOUmaior);
