@@ -104,7 +104,7 @@
 					if (palpite === num) {
 						Tentativas++;
 						alert('Parabéns! Você acertou.\n' + Tentativas + ' tentativa(s).');
-						modalJogo.style.display = "close";
+						var num = Math.floor(Math.random() * 10) + 1;
 					} else {
 						alert('Você errou.' + menorOUmaior);
 					}
