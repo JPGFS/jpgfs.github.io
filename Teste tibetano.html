@@ -210,7 +210,13 @@
                                             <h5>Laranja: Alguém que considera ser um verdadeiro amigo.</h5><br/>
                                             <h5>Vermelho: Alguém que você ama incondicionalmente.</h5><br/>
                                             <h5>Branco: A alma gêmea.</h5><br/>
-                                            <h5>Verde: Alguém que você nunca vai esquecer.</h5>
+                                            <h5>Verde: Alguém que você nunca vai esquecer.</h5><br/>
+                                            <h3>O que você escolheu:</h3><br/>
+                                            <h5>Amarelo: <span id="modal-amarelo"></span></h5><br/>
+                                            <h5>Laranja: <span id="modal-laranja"></span></h5><br/>
+                                            <h5>Vermelho: <span id="modal-vermelho"></span></h5><br/>
+                                            <h5>Branco: <span id="modal-branco"></span></h5><br/>
+                                            <h5>Verde: <span id="modal-verde"></span></h5>
                                         </div>
                                     </div>
                                 </div>
@@ -243,6 +249,17 @@
                 document.getElementById("modal-rato").textContent = rato;
                 document.getElementById("modal-cafe").textContent = cafe;
                 document.getElementById("modal-mar").textContent = mar;
+
+                const amarelo = document.getElementById("amarelo").value;
+                const laranja = document.getElementById("laranja").value;
+                const vermelho = document.getElementById("vermelho").value;
+                const branco = document.getElementById("branco").value;
+                const verde = document.getElementById("verde").value;
+                document.getElementById("modal-amarelo").textContent = amarelo;
+                document.getElementById("modal-laranja").textContent = laranja;
+                document.getElementById("modal-vermelho").textContent = vermelho;
+                document.getElementById("modal-branco").textContent = branco;
+                document.getElementById("modal-verde").textContent = verde;
             }
         </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
