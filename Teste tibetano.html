@@ -94,28 +94,28 @@
                     <h3>2 - Dê um adjetivo a cada substantivo nessa lista. Use apenas um adjetivo por substantivo:</h3>
                     <div class="card-body">
                         <div class="row">
-                            <label for="cao"><h5>O cão é:</h5></label>
+                            <label for="cao"><h5>O cachorro é:</h5></label>
                             <h5><input type="text" id="cao" name="cao"></h5>
                         </div>
                         <div class="espaço2"></div>
                         <div class="row">
                             <label for="gato"><h5>O gato é:</h5></label>
-                            <input type="text" id="gato" name="gato">
+                            <h5><input type="text" id="gato" name="gato"></h5>
                         </div>
                         <div class="espaço2"></div>
                         <div class="row">
                             <label for="rato"><h5>O rato é:</h5></label>
-                            <input type="text" id="rato" name="rato">
+                            <h5><input type="text" id="rato" name="rato"></h5>
                         </div>
                         <div class="espaço2"></div>
                         <div class="row">
-                            <label for="cafe"><h5>O cafe é:</h5></label>
-                            <input type="text" id="cafe" name="cafe">
+                            <label for="cafe"><h5>O café é:</h5></label>
+                            <h5><input type="text" id="cafe" name="cafe"></h5>
                         </div>
                         <div class="espaço2"></div>
                         <div class="row">
                             <label for="mar"><h5>O mar é:</h5></label>
-                            <input type="text" id="mar" name="mar">
+                            <h5><input type="text" id="mar" name="mar"></h5>
                         </div>
                     </div>
                 </div>
@@ -127,27 +127,27 @@
                     <div class="card-body">
                         <div class="row">
                             <label for="amarelo"><h5>Amarelo:</h5></label>
-                            <input type="text" id="amarelo" name="amarelo">
+                            <h5><input type="text" id="amarelo" name="amarelo"></h5>
                         </div>
                         <div class="espaço2"></div>
                         <div class="row">
                             <label for="laranja"><h5>Laranja:</h5></label>
-                            <input type="text" id="laranja" name="laranja">
+                            <h5><input type="text" id="laranja" name="laranja"></h5>
                         </div>
                         <div class="espaço2"></div>
                         <div class="row">
                             <label for="vermelho"><h5>Vermelho:</h5></label>
-                            <input type="text" id="vermelho" name="vermelho">
+                            <h5><input type="text" id="vermelho" name="vermelho"></h5>
                         </div>
                         <div class="espaço2"></div>
                         <div class="row">
                             <label for="branco"><h5>Branco:</h5></label>
-                            <input type="text" id="branco" name="branco">
+                            <h5><input type="text" id="branco" name="branco"></h5>
                         </div>
                         <div class="espaço2"></div>
                         <div class="row">
                             <label for="verde"><h5>Verde:</h5></label>
-                            <input type="text" id="verde" name="verde">
+                            <h5><input type="text" id="verde" name="verde"></h5>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
             <div class="row justify-content-center">
                 <div class="card text-center justify-content-center align-items-center">
                     <div class="col-12 cinza_claro d-flex align-items-center">
-                        <button type="button" data-toggle="modal" data-target="#resultado" onclick="mostraAnimalSelecionado()">
+                        <button type="button" data-toggle="modal" data-target="#resultado" onclick="resultado()">
                             Resultado
                         </button>
                     </div>
@@ -170,34 +170,40 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <div class="modal-content">
-                                    <div class="col-6">
+                                <div class="modal-content justify-content-center">
+                                    <div class="col-12">
                                         <h3>1 – A maneira como você ordenou estas coisas é, evidentemente, um indicativo das suas prioridades na vida.</h3>
-                                        <h5>Vaca: Sua carreira</h5><br/>
-                                        <h5>Tigre: Sua autoestima</h5><br/>
-                                        <h5>Ovelha: Amor</h5><br/>
-                                        <h5>Cavalo: Família</h5><br/>
-                                        <h5>Porco: Dinheiro</h5>
+                                        <div class="card-body align-items-center">
+                                            <h5>Vaca: Sua carreira</h5><br/>
+                                            <h5>Tigre: Sua autoestima</h5><br/>
+                                            <h5>Ovelha: Amor</h5><br/>
+                                            <h5>Cavalo: Família</h5><br/>
+                                            <h5>Porco: Dinheiro</h5><br/>
+                                            <h3>O que você escolheu:</h3><br/>
+                                            <h5>Animal 1: <span id="modal-animal1"></span></h5><br/>
+                                            <h5>Animal 2: <span id="modal-animal2"></span></h5><br/>
+                                            <h5>Animal 3: <span id="modal-animal3"></span></h5><br/>
+                                            <h5>Animal 4: <span id="modal-animal4"></span></h5><br/>
+                                            <h5>Animal 5: <span id="modal-animal5"></span></h5>
+                                        </div>
                                     </div>
-                                    <div class="col-6">
-                                        <h3>O que você escolheu:</h3><br/>
-                                        <h5>Animal 1: <span id="modal-animal1"></span></h5><br/>
-                                        <h5>Animal 2: <span id="modal-animal2"></span></h5><br/>
-                                        <h5>Animal 3: <span id="modal-animal3"></span></h5><br/>
-                                        <h5>Animal 4: <span id="modal-animal4"></span></h5><br/>
-                                        <h5>Animal 5: <span id="modal-animal5"></span></h5>
-                                    </div>
-                                    <div class="col-9 card">
+                                    <div class="col-12 card">
                                         <h3>2 – O adjetivo que você escolheu para descrever cada substantivo diz respeito a sua visão subconsciente do que aquele substantivo representa.</h3>
                                         <div class="card-body align-items-center">
                                             <h5>Cachorro: Sua personalidade</h5><br/>
                                             <h5>Gato: Personalidade do seu parceiro</h5><br/>
                                             <h5>Rato: Personalidade dos seus inimigos</h5><br/>
                                             <h5>Café: Opinião sobre relacionamento</h5><br/>
-                                            <h5>Mar: Sua vida em geral</h5>
+                                            <h5>Mar: Sua vida em geral</h5><br/>
+                                            <h3>O que você escolheu:</h3><br/>
+                                            <h5>Cachorro: <span id="modal-cao"></span></h5><br/>
+                                            <h5>Gato: <span id="modal-gato"></span></h5><br/>
+                                            <h5>Rato: <span id="modal-rato"></span></h5><br/>
+                                            <h5>Café: <span id="modal-cafe"></span></h5><br/>
+                                            <h5>Mar: <span id="modal-mar"></span></h5>
                                         </div>
                                     </div>
-                                    <div class="col-9 card">
+                                    <div class="col-12 card">
                                         <h3>3 – Sua atitude para com as pessoas.</h3>
                                         <div class="card-body align-items-center">
                                             <h5>Amarelo: Alguém que teve um grande impacto em sua vida.</h5><br/>
@@ -215,7 +221,7 @@
             </div>
         </div>
         <script>
-            function mostraAnimalSelecionado() {
+            function resultado() {
                 const animal1 = document.getElementById("animal1").value;
                 const animal2 = document.getElementById("animal2").value;
                 const animal3 = document.getElementById("animal3").value;
@@ -226,6 +232,17 @@
                 document.getElementById("modal-animal3").textContent = animal3;
                 document.getElementById("modal-animal4").textContent = animal4;
                 document.getElementById("modal-animal5").textContent = animal5;
+
+                const cao = document.getElementById("cao").value;
+                const gato = document.getElementById("gato").value;
+                const rato = document.getElementById("rato").value;
+                const cafe = document.getElementById("cafe").value;
+                const mar = document.getElementById("mar").value;
+                document.getElementById("modal-cao").textContent = cao;
+                document.getElementById("modal-gato").textContent = gato;
+                document.getElementById("modal-rato").textContent = rato;
+                document.getElementById("modal-cafe").textContent = cafe;
+                document.getElementById("modal-mar").textContent = mar;
             }
         </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
