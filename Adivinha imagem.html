@@ -123,8 +123,17 @@
           if (resp4 == "Sim") posicao = posicao + 4;
           
           if (posicao > 0) {
-            document.write('<div class="card mt-4 text-center">');
-            document.write('<div class="conteiner"><div class="row justify-content-center"><div class="col-12 card text-center align-items-center"><h3>A imagem que você escolheu foi:</h3></div></div></div><br>');
+            document.getElementById("result-container").innerHTML = `
+              <div class="card mt-4 text-center">
+                <div class="container">
+                  <div class="row justify-content-center">
+                    <div class="col-12 card text-center align-items-center">
+                      <h3>A imagem que você escolheu foi:</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
             if(posicao ==1) document.write('<img src="Imagens/Imagens do jogo de imagens/Img1.png" class="img-fluid" style="height: 200px;" /> ');
             if(posicao ==2) document.write('<img src="Imagens/Imagens do jogo de imagens/Img2.png" class="img-fluid" style="height: 200px;" /> ');
             if(posicao ==3) document.write('<img src="Imagens/Imagens do jogo de imagens/Img3.png" class="img-fluid" style="height: 200px;" /> ');
@@ -140,11 +149,14 @@
             if(posicao ==13) document.write('<img src="Imagens/Imagens do jogo de imagens/Img13.png" class="img-fluid" style="height: 200px;" /> ');
             if(posicao ==14) document.write('<img src="Imagens/Imagens do jogo de imagens/Img14.png" class="img-fluid" style="height: 200px;" /> ');
             if(posicao ==15) document.write('<img src="Imagens/Imagens do jogo de imagens/Img15.png" class="img-fluid" style="height: 200px;" /> ');
-            document.write('<br><br><a href="Adivinha imagem.html" class="btn btn-primary mt-2">Tentar Novamente</a>');
-            document.write('</div>');
+            ddocument.getElementById("result-container").innerHTML = `
+              <div class="mt-4">
+                <a href="Adivinha imagem.html" class="btn btn-primary mt-2">Tentar Novamente</a>
+              </div>
+            `;
           }
           else {
-            alert="Escolha uma imagem";
+            alert("Escolha uma imagem");
           }
       }
     </script>
