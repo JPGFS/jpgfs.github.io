@@ -178,7 +178,13 @@
                                             <h5>Tigre: Sua autoestima</h5><br/>
                                             <h5>Ovelha: Amor</h5><br/>
                                             <h5>Cavalo: Família</h5><br/>
-                                            <h5>Porco: Dinheiro</h5>
+                                            <h5>Porco: Dinheiro</h5><br/>
+                                            <h3>Valores Selecionados:</h3><br/><br/>
+                                            <p>Animal 1: <span id="modal-animal1"></span></p><br/>
+                                            <p>Animal 2: <span id="modal-animal2"></span></p><br/>
+                                            <p>Animal 3: <span id="modal-animal3"></span></p><br/>
+                                            <p>Animal 4: <span id="modal-animal4"></span></p><br/>
+                                            <p>Animal 5: <span id="modal-animal5"></span></p>
                                         </div>
                                     </div>
                                     <div class="col-9 card">
@@ -208,6 +214,20 @@
                 </div>
             </div>
         </div>
+        <script>
+            function mostraAnimalSelecionado() {
+                const animal1 = document.getElementById("animal1").value;
+                const animal2 = document.getElementById("animal2").value;
+                const animal3 = document.getElementById("animal3").value;
+                const animal4 = document.getElementById("animal4").value;
+                const animal5 = document.getElementById("animal5").value;
+                document.getElementById("modal-animal1").textContent = animal1;
+                document.getElementById("modal-animal2").textContent = animal2;
+                document.getElementById("modal-animal3").textContent = animal3;
+                document.getElementById("modal-animal4").textContent = animal4;
+                document.getElementById("modal-animal5").textContent = animal5;
+            }
+        </script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
